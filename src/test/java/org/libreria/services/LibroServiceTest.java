@@ -43,7 +43,7 @@ public class LibroServiceTest {
     when(libroRepository.save(any(Libro.class))).thenReturn(libro);
     Libro guardado = libroService.guardarLibro(new Libro());
     assertNotNull(guardado);
-    assertEquals("Para que falle", guardado.getTitulo());
+    assertEquals("El Quijote", guardado.getTitulo());
     verify(libroRepository, times(1)).save(any(Libro.class));
   }
 
